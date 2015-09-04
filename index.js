@@ -111,7 +111,7 @@ app.use('/users', userRouter);
 var accountRouter = express.Router();
 // A GET to the root of a resource returns a list of that resource
 accountRouter.get('/', function(req, res) {
-	 var sql = 'SELECT * FROM accounts';
+	 var sql = 'SELECT * FROM accounts ORDER BY id';
     postgres.client.query(sql, function(err, result) {
         if (err) {
             // We shield our clients from internal errors, but log them
@@ -165,7 +165,7 @@ app.use('/accounts', accountRouter);
 var transactionRouter = express.Router();
 // A GET to the root of a resource returns a list of that resource
 transactionRouter.get('/', function(req, res) {
-	 var sql = 'SELECT * FROM transactions';
+	 var sql = 'SELECT * FROM transactions ORDER BY created_at';
     postgres.client.query(sql, function(err, result) {
         if (err) {
             // We shield our clients from internal errors, but log them
@@ -219,7 +219,7 @@ app.use('/transactions', transactionRouter);
 var billRouter = express.Router();
 // A GET to the root of a resource returns a list of that resource
 billRouter.get('/', function(req, res) {
-	 var sql = 'SELECT * FROM bills';
+	 var sql = 'SELECT * FROM bills ORDER BY pay_date';
     postgres.client.query(sql, function(err, result) {
         if (err) {
             // We shield our clients from internal errors, but log them
@@ -274,7 +274,7 @@ app.use('/bills', billRouter);
 var billerRouter = express.Router();
 // A GET to the root of a resource returns a list of that resource
 billerRouter.get('/', function(req, res) {
-	 var sql = 'SELECT * FROM billers';
+	 var sql = 'SELECT * FROM billers ORDER BY id';
     postgres.client.query(sql, function(err, result) {
         if (err) {
             // We shield our clients from internal errors, but log them
@@ -331,7 +331,7 @@ app.use('/billers', billerRouter);
 var accounttypeRouter = express.Router();
 // A GET to the root of a resource returns a list of that resource
 accounttypeRouter.get('/', function(req, res) {
-	var sql = 'SELECT * FROM accounttypes';
+	var sql = 'SELECT * FROM accounttypes ORDER BY id';
     postgres.client.query(sql, function(err, result) {
         if (err) {
             // We shield our clients from internal errors, but log them
@@ -387,7 +387,7 @@ app.use('/accounttypes', accounttypeRouter);
 var depositRouter = express.Router();
 // A GET to the root of a resource returns a list of that resource
 depositRouter.get('/', function(req, res) {
-	 var sql = 'SELECT * FROM deposits';
+	 var sql = 'SELECT * FROM deposits ORDER BY id';
     postgres.client.query(sql, function(err, result) {
         if (err) {
             // We shield our clients from internal errors, but log them
