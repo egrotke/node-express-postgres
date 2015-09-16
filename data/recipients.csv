@@ -1,0 +1,12 @@
+"id","name","phone_no","email","user_id","lastdate","lastamount"
+0,"Aaron Jacobsen","415-234-1256","ajacobsen@gmail.com",0,"2015-01-13 00:00:00",50
+1,"Allen Jeffries","415-234-1256","ajeffries@gmail.com",0,"2015-03-23 00:00:00",520
+2,"Angela Daugherty","555-234-9876","aDaugherty@yahoo.com",0,"2015-03-15 00:00:00",1120
+3,"Ashley Jacobs","555-234-9876","aJacobs@hotmail.com",0,"2015-02-13 00:00:00",120
+4,"Anna Vandervan","510-234-9876","avandervan@hotmail.com",1,"2015-02-13 00:00:00",60
+5,"Amanda Warner","510-234-9876","awarner@gmail.com",1,"2015-02-23 00:00:00",40
+6,"Anthony Hintz","555-234-9876","ahintz@gmail.com",1,"2015-03-23 00:00:00",130
+7,"Ari Bigsby","555-234-9876","abigsby@gmail.com",1,"2015-05-11 00:00:00",56
+8,"Jill Jankowski","415-234-2344","jjankowski@gmail.com",1,"2015-06-08 00:00:00",88
+9,"Lawrence Oliosh","415-234-7655","loliosh@gmail.com",1,"2015-01-13 00:00:00",3000
+10,"Rishi Chandar","415-234-2344","rchandar@gmail.com",1,"2015-06-13 00:00:00",1000
