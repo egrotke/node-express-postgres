@@ -7,6 +7,5 @@ postgresql://[user[:password]@][netloc][:port][/dbname][?param1=value1&...]
 Execute ./bin/www to start the server
 
 
-
 For more info, read the blog post [here](https://medium.com/@jeffandersen/building-a-node-js-rest-api-with-express-46b0901f29b6)
 

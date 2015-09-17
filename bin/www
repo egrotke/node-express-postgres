@@ -4,14 +4,14 @@ var app = require('../index');
 var pg = require('../lib/postgres');
 
 // Your database configuration
-var DATABASE_URL = 'postgres://egrotke@localhost/api'
+var DATABASE_URL = 'postgres://egrotke:UnicornMagic8675309@localhost/api'
 
 // Connect to mysql database
 pg.initialize(DATABASE_URL, function(err) {
   if (err) {
     throw err;
   }
-  
+
   // Which port to listen on
   app.set('port', process.env.PORT || 3000);
 
