@@ -42,38 +42,38 @@ userRouter.get("/", function(req, res) {
 
 // A POST to the root of a resource should create a new object
 userRouter.post('/', function(req, res) {
-    var sql = 'INSERT INTO users (name, username, password) VALUES ($1,$2,$3) RETURNING id';
-    // Retrieve the data to insert from the POST body
-    var data = [
-        req.body.name,
-        req.body.username,
-        req.body.password
-    ];
-    postgres.client.query(sql, data, function(err, result) {
-        if (err) {
-            // We shield our clients from internal errors, but log them
-            console.error(err);
-            res.statusCode = 500;
-            return res.json({
-                errors: ['Failed to create photo']
-            });
-        }
-        var newUserId = result.rows[0].id;
-        var sql = 'SELECT * FROM users WHERE id = $1';
-        postgres.client.query(sql, [newUserId], function(err, result) {
-            if (err) {
-                // We shield our clients from internal errors, but log them
-                console.error(err);
-                res.statusCode = 500;
-                return res.json({
-                    errors: ['Could not retrieve user']
-                });
-            }
-            // The request created a new resource object
-            res.statusCode = 201;
-            // The result of CREATE should be the same as GET
-            res.json(result.rows[0]);
-        });
+    // var sql = 'INSERT INTO users (name, username, password) VALUES ($1,$2,$3) RETURNING id';
+    // // Retrieve the data to insert from the POST body
+    // var data = [
+    //     req.body.name,
+    //     req.body.username,
+    //     req.body.password
+    // ];
+    // postgres.client.query(sql, data, function(err, result) {
+    //     if (err) {
+    //         // We shield our clients from internal errors, but log them
+    //         console.error(err);
+    //         res.statusCode = 500;
+    //         return res.json({
+    //             errors: ['Failed to create photo']
+    //         });
+    //     }
+    //     var newUserId = result.rows[0].id;
+    //     var sql = 'SELECT * FROM users WHERE id = $1';
+    //     postgres.client.query(sql, [newUserId], function(err, result) {
+    //         if (err) {
+    //             // We shield our clients from internal errors, but log them
+    //             console.error(err);
+    //             res.statusCode = 500;
+    //             return res.json({
+    //                 errors: ['Could not retrieve user']
+    //             });
+    //         }
+    //         // The request created a new resource object
+    //         res.statusCode = 201;
+    //         // The result of CREATE should be the same as GET
+    //         res.json(result.rows[0]);
+    //     });
     });
 });
 
