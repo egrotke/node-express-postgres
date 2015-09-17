@@ -74,7 +74,7 @@ userRouter.post('/', function(req, res) {
     //         // The result of CREATE should be the same as GET
     //         res.json(result.rows[0]);
     //     });
-    });
+    // });
 });
 
 
